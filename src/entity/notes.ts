@@ -4,15 +4,15 @@ import { Users } from './users';
 
 @Entity('notes')
 export class Notese {
-    @PrimaryGeneratedColumn()
-    notesId:number;
+  @PrimaryGeneratedColumn()
+  notesId: number;
 
-    @Column()
-    title:string;
+  @Column()
+  title: string;
 
-    @Column()
-    description:string;
-    
-    @ManyToOne(type =>Users, users=>users.notes )
-    users:Users
+  @Column()
+  description: string;
+
+  @ManyToOne(type => Users, users => users.notes)
+  users: Users
 }
